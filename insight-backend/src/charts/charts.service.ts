@@ -4,9 +4,14 @@ import { PrismaService } from 'src/prisma.service';
 @Injectable()
 export class ChartsService {
   constructor(private prisma: PrismaService) {}
-  findByKpi(kpi_id: number) {
-    return this.prisma.charts.findMany({
-      where: { KPI_ID: kpi_id },
+  async getKpiData() {
+    const kpi_data = {};
+    const charts = await this.prisma.charts.findMany();
+    charts.map((chart) => {
+      if (kpi_data[chart.KPI_ID])
+        kpi_data[chart.KPI_ID] = [...kpi_data[chart.KPI_ID], chart];
+      else kpi_data[chart.KPI_ID] = [chart];
     });
+    return kpi_data;
   }
 }

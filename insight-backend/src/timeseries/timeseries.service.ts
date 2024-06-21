@@ -4,9 +4,14 @@ import { PrismaService } from 'src/prisma.service';
 @Injectable()
 export class TimeseriesService {
   constructor(private prisma: PrismaService) {}
-  findByKpi(kpi_id: number) {
-    return this.prisma.timeSeries.findMany({
-      where: { KPI_ID: kpi_id },
+  async getKpiData() {
+    const kpi_data = {};
+    const timeserie = await this.prisma.timeSeries.findMany();
+    timeserie.map((data) => {
+      if (kpi_data[data.KPI_ID])
+        kpi_data[data.KPI_ID] = [...kpi_data[data.KPI_ID], data];
+      else kpi_data[data.KPI_ID] = [data];
     });
+    return kpi_data;
   }
 }
