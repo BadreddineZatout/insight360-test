@@ -67,7 +67,9 @@
             <h2 class="text-3xl mt-2">فـــــرعي</h2>
           </div>
         </div>
-        <div class="flex justify-between items-center py-5 px-10 text-center">
+        <div
+          class="flex justify-between items-center gap-5 py-5 px-10 text-center"
+        >
           <div class="w-1/3 space-y-5">
             <div class="flex items-center justify-between">
               <p class="text-xl">
@@ -103,7 +105,7 @@
         </div>
       </div>
       <div class="w-1/3 space-y-5">
-        <div class="card text-center px-20 py-10">
+        <div class="card text-center px-20 py-5">
           <h1 class="text-9xl font-bold text-blue-900">
             {{ (kpi_3[0].KPI_Value / 1000000).toFixed(1) }}
           </h1>
