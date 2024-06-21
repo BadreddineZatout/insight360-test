@@ -28,7 +28,10 @@
               </p>
             </div>
           </div>
-          <div class="w-1/2">
+          <div class="w-1/3">
+            <img src="/image-2.png" alt="" />
+          </div>
+          <div class="w-1/3">
             <h1 class="text-7xl font-bold">
               {{ (kpi_1[5].KPI_Value / 1000000).toFixed(1) }}
             </h1>
@@ -59,7 +62,10 @@
               </p>
             </div>
           </div>
-          <div class="w-1/2">
+          <div class="w-1/3">
+            <img src="/image-2.png" alt="" />
+          </div>
+          <div class="w-1/3">
             <h1 class="text-7xl font-bold">
               {{ (kpi_1[4].KPI_Value / 1000000).toFixed(1) }}
             </h1>
