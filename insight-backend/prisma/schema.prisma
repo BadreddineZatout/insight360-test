@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model Charts {
+  ID                 Int      @id(map: "PK_Charts") @default(autoincrement())
+  KPI_ID             Int
+  KPI_Date           DateTime @db.DateTime
+  KPI_Name           String?  @db.NVarChar(255)
+  KPI_Name_AR        String?  @db.NVarChar(255)
+  KPI_Description    String?  @db.NVarChar(255)
+  KPI_Description_AR String?  @db.NVarChar(255)
+  Category1          String?  @db.NVarChar(255)
+  Category2          String?  @db.NVarChar(255)
+  KPI_Value          Float?
+  Is_Current         Boolean?
+}
+
+model TimeSeries {
+  ID                 Int       @id(map: "PK_TimeSeries") @default(autoincrement())
+  KPI_ID             Int
+  KPI_Date           DateTime  @db.DateTime
+  KPI_Name           String?   @db.NVarChar(255)
+  KPI_Name_AR        String?   @db.NVarChar(255)
+  KPI_Description    String?   @db.NVarChar(255)
+  KPI_Description_AR String?   @db.NVarChar(255)
+  Date               DateTime? @db.Date
+  Category           String?   @db.NVarChar(255)
+  KPI_Value          Float?
+  Is_Current         Boolean?
+}
