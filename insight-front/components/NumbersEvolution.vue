@@ -61,7 +61,7 @@ const chartData = ref({
     {
       fill: false,
       borderColor: "rgb(59 130 246)",
-      tension: 0.1,
+      tension: 0.3,
       backgroundColor: "rgb(59 130 246)",
       data: props.kpi_6.map((data) => (data.KPI_Value / 10000).toFixed(1)),
     },
