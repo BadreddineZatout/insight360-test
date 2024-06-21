@@ -41,6 +41,29 @@
         )
       "
     />
+    <ExtraStats
+      :kpi_7="chart_data[7]"
+      :kpi_8="chart_data[8]"
+      :kpi_9="
+        chart_data[9].map((data) => {
+          let value = data.KPI_Value;
+          let multiplier = '';
+          if (value.toString().length >= 6) {
+            value = (value / 1000000).toFixed(1);
+            multiplier = 'مليـــون';
+          }
+          if (value.toString().length > 3) {
+            value = (value / 1000).toFixed(1);
+            multiplier = 'ألــــف';
+          }
+          return {
+            value,
+            category: data.Category1,
+            multiplier,
+          };
+        })
+      "
+    />
   </div>
 </template>
 
