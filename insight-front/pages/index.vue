@@ -1,7 +1,47 @@
 <template>
-  <h1 class="text-3xl text-green-400 font-bold underline">Hello world!</h1>
+  <div class="px-32 py-20">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center gap-5 text-lg">
+        <svg
+          class="h-7 rounded-lg bg-blue-950 text-white px-1 py-1"
+          data-slot="icon"
+          aria-hidden="true"
+          fill="none"
+          stroke-width="2.0"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+        <h1>JUMP TO</h1>
+      </div>
+      <div class="flex items-center gap-5 text-lg">
+        <div class="rounded-full bg-cyan-400 text-white px-3 py-1">01</div>
+        <div class="rounded-full bg-gray-400 text-white px-3 py-1">
+          SECTION ONE
+        </div>
+      </div>
+    </div>
+    <CommercialRecords
+      :kpi_1="chart_data[1]"
+      :kpi_2="chart_data[2]"
+      :kpi_3="chart_data[3]"
+      :kpi_4="chart_data[4]"
+      :kpi_5="chart_data[5]"
+    />
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { API_URL } from "~/config";
+
+const { data: chart_data } = await useFetch(API_URL + "/charts");
+const { data: timeseries_data } = await useFetch(API_URL + "/timeseries");
+</script>
 
 <style scoped></style>

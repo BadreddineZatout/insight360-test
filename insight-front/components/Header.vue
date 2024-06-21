@@ -1,7 +1,7 @@
 <template>
-  <div class="pt-10 w-full text-white bg-black">
+  <div class="pt-10 w-full text-white bg-black px-32">
     <div
-      class="w-full flex flex-wrap justify-center gap-20 items-center text-xl font-semibold px-10"
+      class="w-full flex flex-wrap justify-center gap-20 items-center text-xl font-semibold"
     >
       <div class="text-end flex items-center gap-5">
         <div>
