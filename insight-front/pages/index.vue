@@ -34,6 +34,13 @@
       :kpi_4="chart_data[4]"
       :kpi_5="chart_data[5]"
     />
+    <NumbersEvolution
+      :kpi_6="
+        timeseries_data[6].filter(
+          (data) => data.KPI_Name && data.Category == 'Overall'
+        )
+      "
+    />
   </div>
 </template>
 
