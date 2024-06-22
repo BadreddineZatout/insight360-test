@@ -8,7 +8,7 @@
         المهن الاستشارية
       </h1>
       <div
-        class="rounded-xl bg-blue-400 flex justify-center items-center gap-5 p-3 text-lg"
+        class="rounded-xl bg-blue-400 text-white flex justify-center items-center gap-5 p-3 text-lg"
       >
         <div class="text-end">
           <h2>ألف</h2>

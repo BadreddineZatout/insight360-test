@@ -74,6 +74,8 @@
         )
       "
     />
+
+    <CommercialAgencies :kpi_13="chart_data[13]" :kpi_14="chart_data[14]" />
   </div>
 </template>
 
