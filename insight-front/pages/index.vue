@@ -76,6 +76,10 @@
     />
 
     <CommercialAgencies :kpi_13="chart_data[13]" :kpi_14="chart_data[14]" />
+
+    <ConsumerProtection
+      :kpi_15="chart_data[15].filter((data) => data.Category1 == 'Case type')"
+    />
   </div>
 </template>
 
