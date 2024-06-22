@@ -80,6 +80,33 @@
     <ConsumerProtection
       :kpi_15="chart_data[15].filter((data) => data.Category1 == 'Case type')"
     />
+
+    <div class="mt-10">
+      <UButton
+        class="text-4xl font-bold flex items-center gap-7 w-fit"
+        color="blue"
+        size="xl"
+        to="/page2"
+      >
+        Next Page
+        <svg
+          class="w-10"
+          data-slot="icon"
+          aria-hidden="true"
+          fill="none"
+          stroke-width="3.0"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+      </UButton>
+    </div>
   </div>
 </template>
 
