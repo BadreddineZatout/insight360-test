@@ -64,6 +64,16 @@
         })
       "
     />
+
+    <Professions
+      :kpi_10="chart_data[10]"
+      :kpi_11="chart_data[11]"
+      :kpi_12="
+        timeseries_data[12].filter(
+          (data) => data.KPI_Name && data.Category == 'Overall'
+        )
+      "
+    />
   </div>
 </template>
 

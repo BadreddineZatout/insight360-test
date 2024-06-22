@@ -146,7 +146,6 @@
 
 <script setup>
 const props = defineProps(["kpi_1", "kpi_2", "kpi_3", "kpi_4", "kpi_5"]);
-console.log(props);
 </script>
 
 <style scoped>
